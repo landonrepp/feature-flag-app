@@ -1,0 +1,29 @@
+-- table application
+DEFINE TABLE application;
+
+DEFINE FIELD name ON TABLE application TYPE string
+  ASSERT $value != NONE;
+
+DEFINE FIELD name ON TABLE application TYPE string
+  ASSERT $value != NONE;
+
+DEFINE FIELD key ON TABLE application TYPE string
+  ASSERT $value != NONE;
+
+DEFINE INDEX applicationNameIndex ON TABLE application COLUMNS name UNIQUE;
+
+-- table user
+DEFINE TABLE user;
+
+DEFINE FIELD name ON TABLE user TYPE string
+  ASSERT $value != NONE;
+
+DEFINE FIELD email ON TABLE user TYPE string
+  ASSERT $value != NONE;
+
+DEFINE FIELD googleId ON TABLE user TYPE string
+  ASSERT $value != NONE;
+
+DEFINE INDEX userEmailIndex ON TABLE user COLUMNS email UNIQUE;
+
+DEFINE INDEX userGoogleIdIndex ON TABLE user COLUMNS googleId UNIQUE;
